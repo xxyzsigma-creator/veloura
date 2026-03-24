@@ -1,0 +1,1009 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VELOURA | Luxury Tote Bags for Women</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&amp;family=Outfit:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+  <script src="/_sdk/element_sdk.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    :root {
+      --bg-primary: #faf7f5;
+      --bg-secondary: #f5ede8;
+      --card-bg: #fbf9f7;
+      --text-primary: #4a3c34;
+      --text-secondary: #7a6b63;
+      --accent-warm: #a08270;
+      --accent-dark: #8b6f5f;
+      --border-light: #ede3db;
+      --shadow-sm: 0 4px 12px rgba(74, 60, 52, 0.08);
+      --shadow-md: 0 8px 24px rgba(74, 60, 52, 0.12);
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+      overflow-x: hidden;
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+    }
+
+    main {
+      width: 100%;
+      height: 100%;
+      overflow-y: auto;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 80px;
+    }
+
+    /* Header */
+    header {
+      padding: 32px 0 24px;
+      text-align: center;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .brand {
+      font-family: 'Lora', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--text-primary);
+      text-transform: uppercase;
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 64px 0;
+      text-align: center;
+    }
+
+    .hero-title {
+      font-family: 'Lora', serif;
+      font-size: clamp(2.2rem, 6vw, 3.2rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 20px;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+    }
+
+    .hero-description {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      max-width: 620px;
+      margin: 0 auto 28px;
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    .hero-quote {
+      font-family: 'Lora', serif;
+      font-size: 1.3rem;
+      font-style: italic;
+      color: var(--accent-dark);
+      font-weight: 400;
+      letter-spacing: 0.02em;
+    }
+
+    /* Products Section */
+    .products {
+      padding: 64px 0;
+    }
+
+    .product-list {
+      display: grid;
+      gap: 48px;
+    }
+
+    .product-card {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 48px;
+      align-items: center;
+      background: var(--card-bg);
+      border: 1px solid var(--border-light);
+      border-radius: 12px;
+      padding: 28px 48px;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .product-card:hover {
+      box-shadow: var(--shadow-md);
+    }
+
+    .product-card:nth-child(2n) {
+      grid-template-columns: 1fr 1.15fr;
+    }
+
+    .product-card:nth-child(2n) .product-info {
+      order: 2;
+    }
+
+    .product-card:nth-child(2n) .product-image {
+      order: 1;
+    }
+
+    .product-image-wrapper {
+      display: flex;
+      flex-direction: column;
+      order: 1;
+    }
+
+    .product-info-wrapper {
+      display: flex;
+      flex-direction: column;
+      order: 2;
+    }
+
+    .product-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent-dark);
+      margin-bottom: 8px;
+      opacity: 0.8;
+    }
+
+    .product-name {
+      font-family: 'Lora', serif;
+      font-size: clamp(1.6rem, 3vw, 2rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+      line-height: 1.2;
+    }
+
+    .product-description {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      margin-bottom: 12px;
+      line-height: 1.6;
+      font-weight: 300;
+    }
+
+    .product-price {
+      margin-bottom: 14px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--accent-warm);
+    }
+
+    .product-button {
+      align-self: flex-start;
+      padding: 14px 36px;
+      background: var(--accent-warm);
+      color: #ffffff;
+      border: none;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .product-button:hover {
+      background: var(--accent-dark);
+      transform: translateY(-2px);
+    }
+
+    .product-button:active {
+      transform: translateY(0);
+    }
+
+    .product-image {
+      background: linear-gradient(135deg, #e8dcd2 0%, #f2e8df 50%, #faf7f5 100%);
+      border-radius: 8px;
+      width: 100%;
+      max-width: 420px;
+      height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      object-fit: contain;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+      flex-shrink: 0;
+    }
+
+    .product-image:hover {
+      transform: scale(1.02);
+    }
+
+    .product-card:nth-child(1) .product-image,
+    .product-card:nth-child(3) .product-image {
+      background: linear-gradient(135deg, #e8dcd2 0%, #f2e8df 50%, #faf7f5 100%) !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .product-card:nth-child(1) .product-image img,
+    .product-card:nth-child(3) .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      display: block;
+    }
+
+    /* Image Modal */
+    .image-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .image-modal.active {
+      display: flex;
+    }
+
+    .modal-content {
+      position: relative;
+      max-width: 90vw;
+      max-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-image {
+      width: 100%;
+      height: 100%;
+      max-width: 600px;
+      max-height: 600px;
+      object-fit: contain;
+      border-radius: 12px;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: -40px;
+      right: 0;
+      background: rgba(255, 255, 255, 0.2);
+      border: 2px solid #ffffff;
+      color: #ffffff;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      transition: all 0.3s ease;
+      padding: 0;
+    }
+
+    .modal-close:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 768px) {
+      .modal-close {
+        top: 10px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+      }
+
+      .modal-image {
+        max-width: 85vw;
+        max-height: 70vh;
+      }
+    }
+
+    /* Copy Toast */
+    .copy-toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--accent-warm);
+      color: #ffffff;
+      padding: 14px 24px;
+      border-radius: 6px;
+      box-shadow: var(--shadow-md);
+      z-index: 2000;
+      font-size: 0.95rem;
+      font-weight: 500;
+      animation: slideIn 0.3s ease;
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideOut {
+      from {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      to {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+    }
+
+    .copy-toast.hide {
+      animation: slideOut 0.3s ease;
+    }
+
+    /* Footer */
+    footer {
+      padding: 48px 24px;
+      text-align: center;
+      border-top: 1px solid var(--border-light);
+      background-color: var(--bg-secondary);
+      margin-top: 32px;
+    }
+
+    .footer-text {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      font-weight: 300;
+      letter-spacing: 0.01em;
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 16px;
+      }
+
+      header {
+        padding: 24px 0 16px;
+      }
+
+      .brand {
+        font-size: 1.5rem;
+        letter-spacing: 0.1em;
+      }
+
+      .hero {
+        padding: 48px 0;
+      }
+
+      .hero-title {
+        margin-bottom: 16px;
+      }
+
+      .hero-description {
+        font-size: 1rem;
+        margin-bottom: 20px;
+      }
+
+      .hero-quote {
+        font-size: 1.1rem;
+      }
+
+      .products {
+        padding: 48px 0;
+      }
+
+      .product-list {
+        gap: 32px;
+      }
+
+      .product-card,
+      .product-card:nth-child(even) {
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding: 24px;
+      }
+
+      .product-card:nth-child(even) .product-info-wrapper,
+      .product-card:nth-child(even) .product-image-wrapper {
+        order: initial;
+      }
+
+      .product-image-wrapper {
+        order: 1;
+        margin-bottom: 24px;
+        width: 100%;
+      }
+
+      .product-info-wrapper {
+        order: 2;
+        width: 100%;
+      }
+
+      .product-image {
+        height: 300px;
+        width: 100%;
+        max-width: 100%;
+        font-size: 4rem;
+        border-radius: 8px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: #f5ede8;
+      }
+
+      .product-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+      }
+
+      .product-label {
+        margin-bottom: 16px;
+      }
+
+      .product-name {
+        font-size: 1.4rem;
+        margin-bottom: 12px;
+      }
+
+      .product-description {
+        font-size: 0.95rem;
+        margin-bottom: 16px;
+      }
+
+      .product-price {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+      }
+
+      .product-button {
+        padding: 12px 28px;
+        font-size: 0.85rem;
+        align-self: flex-start;
+      }
+    }
+  </style>
+  <style>body { box-sizing: border-box; }</style>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com/3.4.17" type="text/javascript"></script>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body>
+  <main>
+   <header>
+    <div class="container">
+     <h1 class="brand" id="brand-name">VELOURA</h1>
+    </div>
+   </header>
+   <div class="container">
+    <section class="hero">
+     <h2 class="hero-title" id="hero-title">Timeless Elegance, Carried Daily</h2>
+     <p class="hero-description" id="hero-description">Luxury tote bags for women who value refined style, everyday function, and effortless sophistication.</p>
+     <div class="hero-quote" id="hero-quote">
+      Designed to carry confidence.
+     </div>
+    </section>
+    <section class="products">
+     <div class="product-list" id="product-list"></div>
+    </section>
+   </div>
+   <footer>
+    <div class="container">
+     <p class="footer-text" id="footer-text">Crafted with intention. Designed for everyday elegance.</p>
+    </div>
+   </footer>
+   <div class="image-modal" id="image-modal">
+    <div class="modal-content">
+     <button class="modal-close" id="modal-close">✕</button> <img id="modal-image" class="modal-image" src="" alt="Product image">
+    </div>
+   </div>
+  </main>
+  <script>
+    const defaultConfig = {
+      brand_name: "VELOURA",
+      hero_title: "Timeless Elegance, Carried Daily",
+      hero_description: "Luxury tote bags for women who value refined style, everyday function, and effortless sophistication.",
+      hero_quote: "Designed to carry confidence.",
+      product1_name: "S-ZONE Vintage Genuine Leather Shoulder Bag Work Totes for Women",
+      product1_desc: "⭐ 4.6 Rating - Trusted by customers",
+      product1_price: "$103 (6% off)",
+      product1_image: "https://m.media-amazon.com/images/I/71rGga3MB6L._AC_SX569_.jpg",
+      product2_name: "Juliette Brown Work Tote Bag with Laptop Sleeve and Detachable Strap",
+      product2_desc: "⭐ 5.0 Rating - Trusted by customers",
+      product2_price: "$255 (12% off)",
+      product2_image: "https://m.media-amazon.com/images/I/71m4GfqSBUL._AC_SL1500_.jpg",
+      product3_name: "Kattee Women's Soft Leather Tote Bag, Top Satchel Purses and Handbags",
+      product3_desc: "⭐ 4.4 Rating - Trusted by customers",
+      product3_price: "$80 (10% off)",
+      product3_image: "https://m.media-amazon.com/images/I/71Zjx+OgouL._AC_SX569_.jpg",
+      product4_name: "MKF Collection Women's Handbag Set in Vegan Leather",
+      product4_desc: "⭐ 4.4 Rating - Trusted by customers",
+      product4_price: "$84 (8% off)",
+      product4_image: "https://m.media-amazon.com/images/I/71iJo0-s66L._AC_SY695_.jpg",
+      product5_name: "Lacoste Women's Anna Large Reversible Tote Bag",
+      product5_desc: "⭐ 4.7 Rating - Trusted by customers",
+      product5_price: "$145 (2% off)",
+      product5_image: "https://m.media-amazon.com/images/I/51-al862obL._AC_SY500_.jpg",
+      product6_name: "FOXLOVER Women's Fashion Tote Bag with Large Capacity",
+      product6_desc: "⭐ 4.3 Rating - Trusted by customers",
+      product6_price: "$109 (5% off)",
+      product6_image: "https://m.media-amazon.com/images/I/51JiBBuM6OL._AC_SY695_.jpg",
+      product7_name: "The Sak Roomy Tote Bag for Women with Shoulder Strap",
+      product7_desc: "⭐ 4.6 Rating - Trusted by customers",
+      product7_price: "$149 (2% off)",
+      product7_image: "https://m.media-amazon.com/images/I/71DOsxN7r5L._AC_SX569_.jpg",
+      product8_name: "Samsonite Cognac Leather Tote for Work and Travel",
+      product8_desc: "⭐ 4.9 Rating - Trusted by customers",
+      product8_price: "$149 (25% off)",
+      product8_image: "https://m.media-amazon.com/images/I/81-7oAzYD7L._AC_SX569_.jpg",
+      product9_name: "Genuine Leather Tote Bag for Women with Zipper and Compartments",
+      product9_desc: "⭐ 5.0 Rating - Trusted by customers",
+      product9_price: "$79 (20% off)",
+      product9_image: "https://m.media-amazon.com/images/I/81FYgcD+1CL._AC_SY695_.jpg",
+      product10_name: "Befen Leather Work Bag for 15 Inch Laptop",
+      product10_desc: "⭐ 4.5 Rating - Trusted by customers",
+      product10_price: "$68 (5% off)",
+      product10_image: "https://m.media-amazon.com/images/I/81JOg1nI1zL._AC_SX679_.jpg",
+      product11_name: "kate spade new york Spade Flower Jacquard Large Everything Tote",
+      product11_desc: "⭐ 5.0 Rating - Trusted by customers",
+      product11_price: "$289 (27% off)",
+      product11_image: "https://m.media-amazon.com/images/I/71mVf5I3ACL._AC_SY550_.jpg",
+      product12_name: "kate spade new york Spade Flower Jacquard Medium Everything Tote, Black Multi",
+      product12_desc: "⭐ 4.6 Rating - Trusted by customers",
+      product12_price: "$195 (40% off)",
+      product12_image: "https://m.media-amazon.com/images/I/71lbGD-Kp+L._AC_SY550_.jpg",
+      product13_name: "kate spade new york Bag in a Box",
+      product13_desc: "⭐ 4.7 Rating - Trusted by customers",
+      product13_price: "$99 (20% off)",
+      product13_image: "https://m.media-amazon.com/images/I/71oGs4aZB4L._SL1500_.jpg",
+      product14_name: "S-ZONE Large Leather Tote Bag for Women for Work and Travel",
+      product14_desc: "⭐ 4.8 Rating - Trusted by customers",
+      product14_price: "$93 (18% off)",
+      product14_image: "https://m.media-amazon.com/images/I/61WiRj44d2L._AC_SY695_.jpg",
+      product15_name: "kate spade new york Tilly Quilted Fabric Medium Tote",
+      product15_desc: "⭐ 4.6 Rating - Trusted by customers",
+      product15_price: "$148 (35% off)",
+      product15_image: "https://m.media-amazon.com/images/I/71ITsS0yNlL._AC_SY550_.jpg",
+      product16_name: "Michael Kors Women's Winston Large Multi-functional Pocket Tote Bag",
+      product16_desc: "⭐ 4.5 Rating - Trusted by customers",
+      product16_price: "$149 (24% off)",
+      product16_image: "https://m.media-amazon.com/images/I/61m0EeqBVfL._AC_SY695_.jpg",
+      product17_name: "S-ZONE Genuine Leather Tote Bag for Women with Purse Organizer Large Shoulder Handbags Work",
+      product17_desc: "⭐ 4.5 Rating - Trusted by customers",
+      product17_price: "$110 (21% off)",
+      product17_image: "https://m.media-amazon.com/images/I/71-l-jihPfL._AC_SX569_.jpg",
+      product18_name: "Large Italian Leather Shoulder Tote for Work and Travel",
+      product18_desc: "⭐ 4.7 Rating - Trusted by customers",
+      product18_price: "$129 (5% off)",
+      product18_image: "https://m.media-amazon.com/images/I/71KOSOklHbL._AC_SY695_.jpg",
+      product19_name: "Oversize Pu Leather Tote Women Weekender Bag Shopper Handbag Travel Purse",
+      product19_desc: "⭐ 4.7 Rating - Trusted by customers",
+      product19_price: "$28 (19% off)",
+      product19_image: "https://m.media-amazon.com/images/I/71IXOxZ9pXL._AC_SY550_.jpg",
+      product20_name: "Kattee Work Tote Bags for Women, Large Genuine Leather Shoulder Handbags with Laptop Compartment",
+      product20_desc: "⭐ 4.8 Rating - Trusted by customers",
+      product20_price: "$67 (5% off)",
+      product20_image: "https://m.media-amazon.com/images/I/713vhaVvamL._AC_SY695_.jpg",
+      product21_name: "S-ZONE Vintage Genuine Leather Tote Bag for Women Large Shoulder Purse Handbag",
+      product21_desc: "⭐ 4.6 Rating - Trusted by customers",
+      product21_price: "$99 (15% off)",
+      product21_image: "https://m.media-amazon.com/images/I/81V3tMA2amL._AC_SX569_.jpg",
+      product22_name: "Befen Genuine Leather Work Tote Bag for Women",
+      product22_desc: "⭐ 4.8 Rating - Trusted by customers",
+      product22_price: "$53 (10% off)",
+      product22_image: "https://m.media-amazon.com/images/I/71bMKmIexoL._AC_SY695_.jpg",
+      product23_name: "LOVEVOOK Vintage Leather Laptop Tote Bag for Women with Clutch",
+      product23_desc: "⭐ 4.8 Rating - Trusted by customers",
+      product23_price: "$59 (6% off)",
+      product23_image: "https://m.media-amazon.com/images/I/71FyrtuJnqL._AC_SL1500_.jpg",
+      product24_name: "Stylish and Spacious Genuine Leather Tote Bag",
+      product24_desc: "⭐ 5.0 Rating - Trusted by customers",
+      product24_price: "$108 (20% off)",
+      product24_image: "https://m.media-amazon.com/images/I/81rIvkAsM+L._AC_SY695_.jpg",
+      product25_name: "ECOSUSI Work Tote Bag for 15.6 Inch Laptop and Office Use",
+      product25_desc: "⭐ 4.6 Rating - Trusted by customers",
+      product25_price: "$52 (4% off)",
+      product25_image: "https://m.media-amazon.com/images/I/61Oo+cVhFeL._AC_SY695_.jpg",
+      product26_name: "ECOSUSI Laptop Messenger Bag for Women for 15.6 Inch Laptop",
+      product26_desc: "⭐ 4.6 Rating - Trusted by customers",
+      product26_price: "$46 (10% off)",
+      product26_image: "https://m.media-amazon.com/images/I/61drZVTcm0L._AC_SX679_.jpg",
+      product27_name: "Iswee Designer Leather Shoulder Tote Bag for Women",
+      product27_desc: "⭐ 4.5 Rating - Trusted by customers",
+      product27_price: "$84 (23% off)",
+      product27_image: "https://m.media-amazon.com/images/I/81dpNW2kPtL._AC_SY695_.jpg",
+      product28_name: "Iswee Designer Leather Tote Bag with Shoulder Strap",
+      product28_desc: "⭐ 4.4 Rating - Trusted by customers",
+      product28_price: "$89 (5% off)",
+      product28_image: "https://m.media-amazon.com/images/I/91MkA6vYVmL._AC_SY695_.jpg",
+      product29_name: "S-ZONE Genuine Leather Shoulder Tote Bag for Women for Work",
+      product29_desc: "⭐ 4.6 Rating - Trusted by customers",
+      product29_price: "$89 (18% off)",
+      product29_image: "https://m.media-amazon.com/images/I/61RLLAQlT9L._AC_SX569_.jpg",
+      product30_name: "Portland Leather Goods Durable Leather Tote Bag with Zipper",
+      product30_desc: "⭐ 4.6 Rating - Trusted by customers",
+      product30_price: "$160 (23% off)",
+      product30_image: "https://m.media-amazon.com/images/I/61MecuyPOcL._AC_SY575_.jpg",
+      product31_name: "Nine West Women's Lyra Laptop Tote",
+      product31_desc: "⭐ 4.8 Rating - Trusted by customers",
+      product31_price: "$75 (36% off)",
+      product31_image: "https://m.media-amazon.com/images/I/41OrxhvcQFL._AC_SX679_.jpg",
+      product32_name: "Top-Grain Cowhide Leather Shoulder Bag for Business and Work",
+      product32_desc: "⭐ 4.8 Rating - Trusted by customers",
+      product32_price: "$149 (10% off)",
+      product32_image: "https://m.media-amazon.com/images/I/61OxiElNbBL._AC_SY575_.jpg",
+      product33_name: "GEMIU Top Handle Satchel Bag for Women for Work",
+      product33_desc: "⭐ 4.5 Rating - Trusted by customers",
+      product33_price: "$36 (5% off)",
+      product33_image: "https://m.media-amazon.com/images/I/71ZI2jVKV9L._AC_SX569_.jpg",
+      product34_name: "Juliette Chocolate Brown Work Tote Bag for Work and Travel",
+      product34_desc: "⭐ 5.0 Rating - Trusted by customers",
+      product34_price: "$255 (21% off)",
+      product34_image: "https://m.media-amazon.com/images/I/61CzYYBcZLL._AC_SL1500_.jpg",
+      product35_name: "Tory Burch Women's Romy Pebbled Satchel",
+      product35_desc: "⭐ 4.7 Rating - Trusted by customers",
+      product35_price: "$450 (2% off)",
+      product35_image: "https://m.media-amazon.com/images/I/61yo95kxidL._AC_SY741_.jpg",
+      product36_name: "Cole Haan womens Essential Leather Soft",
+      product36_desc: "⭐ 4.2 Rating - Trusted by customers",
+      product36_price: "$268 (2% off)",
+      product36_image: "https://m.media-amazon.com/images/I/81I1haV-qZL._AC_SX522_.jpg",
+      product37_name: "FOXLOVER Large Leather Shoulder Tote Bag for Women",
+      product37_desc: "⭐ 4.8 Rating - Trusted by customers",
+      product37_price: "$103 (8% off)",
+      product37_image: "https://m.media-amazon.com/images/I/71HVT7sCdrL._AC_SY695_.jpg",
+      product38_name: "FOXLOVER Designer Leather Tote Bag for Women with a Spacious Interior",
+      product38_desc: "⭐ 4.3 Rating - Trusted by customers",
+      product38_price: "$103 (2% off)",
+      product38_image: "https://m.media-amazon.com/images/I/81FVyeabREL._AC_SY695_.jpg",
+      footer_text: "Crafted with intention. Designed for everyday elegance."
+    };
+
+    let config = { ...defaultConfig };
+
+    const products = [
+      { id: 8, emoji: "💼", configPrefix: "product8" },
+      { id: 1, emoji: "👜", configPrefix: "product1" },
+      { id: 3, emoji: "💼", configPrefix: "product3" },
+      { id: 2, emoji: "🛍️", configPrefix: "product2" },
+      { id: 5, emoji: "👝", configPrefix: "product5" },
+      { id: 6, emoji: "🛍️", configPrefix: "product6" },
+      { id: 7, emoji: "🏖️", configPrefix: "product7" },
+      { id: 9, emoji: "👜", configPrefix: "product9" },
+      { id: 10, emoji: "💻", configPrefix: "product10" },
+      { id: 11, emoji: "✨", configPrefix: "product11" },
+      { id: 12, emoji: "🎀", configPrefix: "product12" },
+      { id: 13, emoji: "💝", configPrefix: "product13" },
+      { id: 14, emoji: "🧳", configPrefix: "product14" },
+      { id: 15, emoji: "✨", configPrefix: "product15" },
+      { id: 16, emoji: "👜", configPrefix: "product16" },
+      { id: 17, emoji: "💼", configPrefix: "product17" },
+      { id: 18, emoji: "🇮🇹", configPrefix: "product18" },
+      { id: 19, emoji: "🛍️", configPrefix: "product19" },
+      { id: 20, emoji: "💼", configPrefix: "product20" },
+      { id: 21, emoji: "👜", configPrefix: "product21" },
+      { id: 4, emoji: "🎒", configPrefix: "product4" },
+      { id: 22, emoji: "💼", configPrefix: "product22" },
+      { id: 23, emoji: "💻", configPrefix: "product23" },
+      { id: 24, emoji: "👜", configPrefix: "product24" },
+      { id: 25, emoji: "💻", configPrefix: "product25" },
+      { id: 26, emoji: "👜", configPrefix: "product26" },
+      { id: 27, emoji: "✨", configPrefix: "product27" },
+      { id: 28, emoji: "👜", configPrefix: "product28" },
+      { id: 29, emoji: "💼", configPrefix: "product29" },
+      { id: 30, emoji: "🔒", configPrefix: "product30" },
+      { id: 31, emoji: "💻", configPrefix: "product31" },
+      { id: 32, emoji: "💼", configPrefix: "product32" },
+      { id: 33, emoji: "👜", configPrefix: "product33" },
+      { id: 34, emoji: "🛍️", configPrefix: "product34" },
+      { id: 35, emoji: "👑", configPrefix: "product35" },
+      { id: 36, emoji: "💼", configPrefix: "product36" },
+      { id: 37, emoji: "👜", configPrefix: "product37" },
+      { id: 38, emoji: "👜", configPrefix: "product38" }
+    ];
+
+    async function onConfigChange(newConfig) {
+      config = { ...config, ...newConfig };
+
+      const brandEl = document.getElementById("brand-name");
+      if (brandEl) brandEl.textContent = config.brand_name || defaultConfig.brand_name;
+
+      const heroTitleEl = document.getElementById("hero-title");
+      if (heroTitleEl) heroTitleEl.textContent = config.hero_title || defaultConfig.hero_title;
+
+      const heroDescEl = document.getElementById("hero-description");
+      if (heroDescEl) heroDescEl.textContent = config.hero_description || defaultConfig.hero_description;
+
+      const heroQuoteEl = document.getElementById("hero-quote");
+      if (heroQuoteEl) heroQuoteEl.textContent = config.hero_quote || defaultConfig.hero_quote;
+
+      const footerEl = document.getElementById("footer-text");
+      if (footerEl) footerEl.textContent = config.footer_text || defaultConfig.footer_text;
+
+      products.forEach(product => {
+        const nameKey = `${product.configPrefix}_name`;
+        const descKey = `${product.configPrefix}_desc`;
+        const priceKey = `${product.configPrefix}_price`;
+
+        if (config[nameKey]) {
+          const nameEl = document.querySelector(`[data-field="${nameKey}"]`);
+          if (nameEl) nameEl.textContent = config[nameKey];
+        }
+
+        if (config[descKey]) {
+          const descEl = document.querySelector(`[data-field="${descKey}"]`);
+          if (descEl) descEl.textContent = config[descKey];
+        }
+
+        if (config[priceKey]) {
+          const priceEl = document.querySelector(`[data-field="${priceKey}"]`);
+          if (priceEl) priceEl.textContent = config[priceKey];
+        }
+      });
+    }
+
+    function mapToCapabilities(currentConfig) {
+      return {
+        recolorables: [],
+        borderables: [],
+        fontEditable: undefined,
+        fontSizeable: undefined
+      };
+    }
+
+    function mapToEditPanelValues(currentConfig) {
+      return new Map([
+        ["brand_name", currentConfig.brand_name || defaultConfig.brand_name],
+        ["hero_title", currentConfig.hero_title || defaultConfig.hero_title],
+        ["hero_description", currentConfig.hero_description || defaultConfig.hero_description],
+        ["hero_quote", currentConfig.hero_quote || defaultConfig.hero_quote],
+        ["footer_text", currentConfig.footer_text || defaultConfig.footer_text]
+      ]);
+    }
+
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities,
+        mapToEditPanelValues
+      });
+
+      window.elementSdk.setConfig(config);
+    }
+
+    function openImageModal(imageUrl) {
+      const modal = document.getElementById("image-modal");
+      const modalImage = document.getElementById("modal-image");
+      modalImage.src = imageUrl;
+      modal.classList.add("active");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeImageModal() {
+      const modal = document.getElementById("image-modal");
+      modal.classList.remove("active");
+      document.body.style.overflow = "auto";
+    }
+
+    function attachImageModalListeners() {
+      const modal = document.getElementById("image-modal");
+      const closeBtn = document.getElementById("modal-close");
+      
+      closeBtn.addEventListener("click", closeImageModal);
+
+      // Close on backdrop click
+      modal.addEventListener("click", closeImageModal);
+
+      // Close on Escape key
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeImageModal();
+      });
+    }
+
+    function renderProducts() {
+      const productList = document.getElementById("product-list");
+      
+      // Create a slug from product name for URL-friendly anchor IDs
+      function createSlug(text) {
+        return text
+          .toLowerCase()
+          .trim()
+          .replace(/[^\w\s-]/g, '')
+          .replace(/\s+/g, '-')
+          .replace(/-+/g, '-');
+      }
+
+      productList.innerHTML = products.map((product, index) => {
+        const productLinks = {
+          8: "https://amzn.to/3NB20Rg",
+          1: "https://amzn.to/47hg09n",
+          3: "https://amzn.to/4dEBmkR",
+          2: "https://amzn.to/4dGtlfj",
+          5: "https://amzn.to/4uMJiGZ",
+          6: "https://amzn.to/40SGxpX",
+          7: "https://amzn.to/47ZRDNC",
+          9: "https://amzn.to/4sZiAJn",
+          10: "https://amzn.to/3PWZCEY",
+          11: "https://amzn.to/40VBjtx",
+          12: "https://amzn.to/3NZ2P6s",
+          13: "https://amzn.to/4szGV95",
+          14: "https://amzn.to/4bK5lFo",
+          15: "https://amzn.to/41mLojk",
+          16: "https://amzn.to/4bPuL4F",
+          17: "https://amzn.to/3NoRaOh",
+          18: "https://amzn.to/3NWoM6c",
+          19: "https://amzn.to/4rQVTGk",
+          20: "https://amzn.to/3Nzu5s9",
+          21: "https://amzn.to/4srYHLb",
+          4: "https://amzn.to/4tag7w4",
+          22: "https://amzn.to/4bwvRn8",
+          23: "https://amzn.to/41qmbEB",
+          24: "https://amzn.to/4lOPJoI",
+          25: "https://amzn.to/4bIqlMT",
+          26: "https://amzn.to/4uO8AV9",
+          27: "https://amzn.to/4880NHY",
+          28: "https://amzn.to/3PlIA3r",
+          29: "https://amzn.to/4bvsY5R",
+          30: "https://amzn.to/4ddKdKp",
+          31: "https://amzn.to/4sGojUP",
+          32: "https://amzn.to/4bSYNVo",
+          33: "https://amzn.to/3PwhVki",
+          34: "https://amzn.to/4sxQNQE",
+          35: "https://amzn.to/4uNJ7uT",
+          36: "https://amzn.to/40WpkvM",
+          37: "https://amzn.to/4dGS2bw",
+          38: "https://amzn.to/47mfNBX",
+        };
+        const productLink = productLinks[product.id] || "#";
+        const isClickable = Object.keys(productLinks).includes(index.toString());
+        const imageUrl = config[`${product.configPrefix}_image`] || defaultConfig[`${product.configPrefix}_image`];
+        
+        // Get product name and create slug for anchor ID
+        const productName = config[`${product.configPrefix}_name`] || defaultConfig[`${product.configPrefix}_name`];
+        const productSlug = createSlug(productName);
+        const anchorId = `product${product.id}-${productSlug}`;
+        
+        const isImgProduct = index === 0 || index === 2;
+        const imageContent = isImgProduct 
+          ? `<img src="${imageUrl}" alt="Product" loading="lazy" style="width: 100%; height: 100%; object-fit: contain; object-position: center; display: block; background-color: #ffffff;" onerror="console.error('Image failed to load:', this.src); this.style.background='#e5e7eb'; this.alt='Image unavailable';">`
+          : `<div class="product-image" style="background-image: url('${imageUrl}'); background-size: contain; background-position: center; background-color: #ffffff; background-repeat: no-repeat;"></div>`;
+        
+        return `
+        <div class="product-card" id="${anchorId}">
+          <div class="product-image-wrapper">
+            ${isImgProduct ? `<div class="product-image" style="display: flex; align-items: center; justify-content: center;">${imageContent}</div>` : imageContent}
+          </div>
+          <div class="product-info-wrapper">
+            <div class="product-info">
+              <div class="product-label">Collection</div>
+              <h3 class="product-name" data-field="${product.configPrefix}_name">${productName}</h3>
+              <p class="product-description" data-field="${product.configPrefix}_desc">${config[`${product.configPrefix}_desc`] || defaultConfig[`${product.configPrefix}_desc`]}</p>
+              <div class="product-price" data-field="${product.configPrefix}_price">
+  ${config[`${product.configPrefix}_price`] || defaultConfig[`${product.configPrefix}_price`]}
+</div>
+              <button class="product-button" data-link="${productLink}">View on Amazon</button>
+            </div>
+          </div>
+        </div>
+      `;
+      }).join("");
+      
+      // Add click handlers to all buttons
+      document.querySelectorAll(".product-button").forEach(button => {
+        button.addEventListener("click", (e) => {
+          e.preventDefault();
+          const link = button.getAttribute("data-link");
+          if (link && link !== "#") {
+            window.open(link, "_blank");
+          }
+        });
+      });
+      
+      // Add click handlers to product images - navigate to product link
+      const productLinks = {
+        0: "https://amzn.to/3NB20Rg",
+        1: "https://amzn.to/41nJOxA",
+        2: "https://amzn.to/4dEBmkR",
+        3: "https://amzn.to/3PrSwIz",
+        4: "https://amzn.to/4uMJiGZ",
+        5: "https://amzn.to/40Ri7Nx",
+        6: "https://amzn.to/47ZRDNC",
+        7: "https://amzn.to/4lIwGMO",
+        8: "https://amzn.to/4lPxCzd",
+        9: "https://amzn.to/4butl0I",
+        10: "https://amzn.to/3PqD5QS",
+        11: "https://amzn.to/4lRgEk8",
+        12: "https://amzn.to/4lOlLkP",
+        13: "https://amzn.to/4lOlLkP",
+        14: "https://amzn.to/3NznLAW",
+        15: "https://amzn.to/4uI9Edj",
+        16: "https://amzn.to/3PF21nH",
+        17: "https://amzn.to/47kEsqx",
+        18: "https://amzn.to/4sy4bUW",
+        19: "https://amzn.to/47gmplk",
+        20: "https://amzn.to/4dEcHgf",
+        21: "https://amzn.to/4dcaRTX",
+        22: "https://amzn.to/4dcaRTX",
+        23: "https://amzn.to/4dcaRTX",
+        24: "https://amzn.to/4dcaRTX",
+        25: "https://amzn.to/4dcaRTX",
+        26: "https://amzn.to/4dcaRTX",
+        27: "https://amzn.to/4dcaRTX",
+        28: "https://amzn.to/4dcaRTX",
+        29: "https://amzn.to/4dcaRTX",
+        30: "https://amzn.to/4dcaRTX",
+        31: "https://amzn.to/4dcaRTX",
+        32: "https://amzn.to/4dcaRTX",
+        33: "https://amzn.to/4dcaRTX",
+        34: "https://amzn.to/4dcaRTX",
+        35: "https://amzn.to/4dcaRTX",
+        36: "https://amzn.to/4dcaRTX",
+        37: "https://amzn.to/4dcaRTX"
+      };
+
+      document.querySelectorAll(".product-image-wrapper").forEach((wrapper, index) => {
+        const imageElement = wrapper.querySelector('img, .product-image');
+        if (imageElement) {
+          imageElement.addEventListener("click", (e) => {
+            e.stopPropagation();
+            const imageUrl = config[`${products[index].configPrefix}_image`] || defaultConfig[`${products[index].configPrefix}_image`];
+            if (imageUrl) {
+              openImageModal(imageUrl);
+            }
+          });
+          imageElement.style.cursor = "pointer";
+        }
+      });
+    }
+
+    renderProducts();
+    attachImageModalListeners();
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9e15d89814c254a4',t:'MTc3NDM1NzA5My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
